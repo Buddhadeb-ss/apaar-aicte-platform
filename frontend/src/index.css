@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAF9F5] text-[#1C1917] font-sans;
+    background-color: #FAF9F5;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: "Anthropic Serif", "Newsreader", "Lora", "Charter", Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom scrollbars with warm editorial palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D3CA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}
+
+/* Professional Minimalist Panel utilities */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid #E5E4DF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel-accent {
+  background: #FFFFFF;
+  border: 1px solid #D5D3CA;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+}
+
+/* Subtle inset background for sub-panels */
+.panel-subtle {
+  background: #F7F6F2;
+  border: 1px solid #E5E4DF;
+}
