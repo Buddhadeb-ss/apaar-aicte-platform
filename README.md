@@ -66,30 +66,40 @@ apaar-aicte-platform/
 │   │   ├── core/
 │   │   │   ├── config.py                 # Settings, secrets & database URL
 │   │   │   ├── identifiers.py            # UUIDs, normalization, Verhoeff, masking
-│   │   │   └── security.py               # PBKDF2 hashing, JWT & HMAC signatures
+│   │   │   ├── security.py               # PBKDF2 hashing, JWT & HMAC signatures
+│   │   │   ├── validation_engine.py      # Deterministic 14 statutory AICTE rules
+│   │   │   └── apaar_validator.py        # Verhoeff format & checksum engine
 │   │   ├── database/
 │   │   │   ├── session.py                # SQLite engine, WAL mode & foreign keys
 │   │   │   ├── models.py                 # SQLAlchemy relational schema
 │   │   │   └── seed_data.py              # Synthetic realistic seeder
+│   │   ├── schemas/                      # Pydantic schemas & DTOs
 │   │   └── main.py                       # FastAPI entrypoint & SPA static mount
-│   ├── tests/
-│   │   ├── test_v1_api.py                # Comprehensive integration test suite
-│   │   └── test_api.py                   # Baseline tests
+│   ├── tests/                            # 44 automated pytest test suite
 │   ├── init_db.py                        # Standalone database initialization script
 │   ├── run_server.py                     # Uvicorn launcher
 │   ├── requirements.txt                  # Python dependencies
 │   └── .env.example                      # Backend environment template
 ├── frontend/
 │   ├── src/
-│   │   ├── components/                   # Navbar, StatCard, Badge, Modal
-│   │   ├── pages/                        # Role dashboards & verification portal
-│   │   ├── services/api.ts               # API client
-│   │   ├── types.ts                      # TypeScript interfaces
+│   │   ├── components/                   # Navbar, StatCard, Badge, Modal, FormModals
+│   │   ├── pages/                        # Command Center, Institution, Directory,
+│   │   │                                 # Validation Workbench, Bulk Import, Pass, Verifier
+│   │   ├── services/api.ts               # API client (Axios/Fetch)
+│   │   ├── types.ts                      # Full TypeScript interfaces
+│   │   ├── utils/verhoeff.ts             # Client-side Verhoeff validation
 │   │   ├── App.tsx                       # Global state & persona router
 │   │   └── main.tsx                      # Vite React entrypoint
 │   ├── package.json
 │   ├── vite.config.ts
 │   └── tailwind.config.js
+├── presentation/                         # SIH26263 Competition Deliverables
+│   ├── SIH26263_Pitch_Deck_Final.pptx    # Executive Pitch Presentation Deck
+│   ├── DEMO_SCRIPT_3MIN.md               # 3-Minute Live Video Demonstration Script
+│   ├── PITCH_DECK_CONTENT.md             # Full Slide-by-Slide Content & Strategy
+│   ├── assets/                           # Presentation diagrams, badges & screens
+│   └── scripts/                          # Automated PPT & slide generation tools
+├── .gitignore
 ├── .env.example
 └── README.md
 ```
